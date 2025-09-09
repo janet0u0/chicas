@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Hora - kirei</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header class="top-navbar">
+        <div class="logo"><img src="img/logo.jpg" alt="kirei"></div>
+        <nav class="nav-buttons">
+            <a href="index.html" class="flower-btn"><i class="fas fa-home"></i> Inicio</a>
+            <a href="registro.html" class="flower-btn"><i class="fas fa-user-plus"></i> Registrarse</a>
+            <a href="login.html" class="flower-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="agenda.html" class="flower-btn"><i class="fas fa-calendar-check"></i> Agendar Hora</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Agendar Hora Médica</h1>
+        <p class="description">Completa los pasos para agendar tu hora con nuestros especialistas.</p>
+
+        <div class="agenda-steps">
+            <div class="step" id="step1">
+                <h2>Paso 1: Selecciona la Especialidad</h2>
+                <select id="especialidad">
+                    <option value="" disabled selected>Selecciona la especialidad</option>
+                    <option value="ginecologia">Ginecología</option>
+                    <option value="nutricion">Nutrición</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="psicologia">Psicología</option>
+                </select>
+                <button class="flower-btn" onclick="nextStep(1)">Continuar</button>
+            </div>
+
+            <div class="step" id="step2">
+                <h2>Paso 2: Selecciona el Profesional</h2>
+                <select id="profesional">
+                    <option value="" disabled selected>Selecciona un profesional</option>
+                </select>
+                <div class="step-buttons">
+                    <button class="flower-btn" onclick="prevStep(2)">Volver</button>
+                    <button class="flower-btn" onclick="nextStep(2)">Continuar</button>
+                </div>
+            </div>
+
+            <div class="step" id="step3">
+                <h2>Paso 3: Selecciona Fecha y Hora</h2>
+                <input type="date" id="fecha">
+                <input type="time" id="hora">
+                <div class="step-buttons">
+                    <button class="flower-btn" onclick="prevStep(3)">Volver</button>
+                    <button class="flower-btn" onclick="nextStep(3)">Continuar</button>
+                </div>
+            </div>
+
+            <div class="step" id="step4">
+                <h2>Paso 4: Tipo de Identificación</h2>
+                <label><input type="radio" name="idtipo" value="rut" checked onclick="showIdField()"> Rut</label>
+                <label><input type="radio" name="idtipo" value="otro" onclick="showIdField()"> Otro</label>
+                <div id="id-input" style="margin-top: 15px;">
+                    <input type="text" id="idvalue" placeholder="Ingresa tu Rut">
+                </div>
+                <div class="step-buttons" style="margin-top: 20px;">
+                    <button class="flower-btn" onclick="prevStep(4)">Volver</button>
+                    <button class="flower-btn" onclick="submitAgenda()">Agendar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="confirmation">
+            ¡Tu cita ha sido agendada exitosamente! 
+            <i class="fas fa-heart"></i>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 kirei Online</p>
+        <p>Desarrollado por Janet Huaylla</p>
+    </footer>
+</body>
+</html>
