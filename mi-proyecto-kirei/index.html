@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"> <!-- Codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
-    <title>kirei</title>
+    <title>Kirei</title>
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/style.css">
@@ -17,8 +17,12 @@
 <body>
     <!-- ===================== HEADER / NAVBAR ===================== -->
     <header class="top-navbar">
-        <div class="logo">
-            <img src="img/logo.png" alt="kirei"> <!-- Logo de la empresa -->
+        <!-- Logo y título juntos -->
+        <div class="logo-title">
+            <div class="logo">
+                <img src="img/logo.png" alt="kirei"> <!-- Logo de la empresa -->
+            </div>
+            <h1 class="site-title">Kirei Chile</h1>
         </div>
 
         <nav class="nav-buttons">
@@ -35,7 +39,7 @@
         <!-- ===================== TEXTO DESCRIPTIVO ===================== -->
         <section class="description">
             <p>
-                Somos <strong>kirei</strong>, dedicados a tu bienestar.  
+                Somos <strong>Kirei</strong>, dedicados a tu bienestar.  
                 Tu opinión y experiencia es lo que cuenta.  
                 Los profesionales serán calificados especialmente por ti y para ti, asegurando la mejor atención según tus preferencias.
             </p>
@@ -57,30 +61,26 @@
             </div>
         </div>
 
-        <!-- ===================== BANNER DE ESPECIALISTAS / CATEGORÍAS ===================== -->
+        <!-- ===================== CATEGORÍAS ===================== -->
         <section class="categorias">
             <h2>Nuestros Especialistas</h2>
 
             <div class="categoria-grid">
-                <!-- Dermatología -->
                 <div class="categoria" data-cat="dermatologia" onclick="location.href='agenda.html?especialidad=dermatologia'">
                     <img src="img/dermatologia.jpg" alt="Dermatología">
                     <h3>Dermatología</h3>
                 </div>
 
-                <!-- Nutrición -->
                 <div class="categoria" data-cat="nutricion" onclick="location.href='agenda.html?especialidad=nutricion'">
                     <img src="img/nutricionista.jpg" alt="Nutrición">
                     <h3>Nutrición</h3>
                 </div>
 
-                <!-- Ginecología -->
                 <div class="categoria" data-cat="ginecologia" onclick="location.href='agenda.html?especialidad=ginecologia'">
                     <img src="img/ginecologia.jpg" alt="Ginecología">
                     <h3>Ginecología</h3>
                 </div>
 
-                <!-- Psicología -->
                 <div class="categoria" data-cat="psicologia" onclick="location.href='agenda.html?especialidad=psicologia'">
                     <img src="img/psicologa.jpg" alt="Psicología">
                     <h3>Psicología</h3>
@@ -92,7 +92,7 @@
 
     <!-- ===================== FOOTER ===================== -->
     <footer>
-        <p>© 2024 kirei Online</p>
+        <p>© 2024 Kirei Online</p>
         <p>Desarrollado por Janet Huaylla</p>
     </footer>
 </body>
